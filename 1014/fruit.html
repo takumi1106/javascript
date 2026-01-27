@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
+</head>
+
+<body>
+
+</html>
+<ul class="fruits">
+    <li id="apple" class="fruits">リンゴ</li>
+    <li id="banana" class="fruits">バナナ</li>
+    <li class="orange fruits">オレンジ</li>
+    <li class="grape fruits">グレープ</li>
+    <li>イチゴ</li>
+    <li id="cabbage" class="vegetable">キャベツ</li>
+</ul>
+
+<p>ひらがなボタン</p>
+<div class="buttons">
+    <button id="appleBtn">りんご</button>
+    <button id="grapeBtn">ぐれーぷ</button>
+    <button class="strawberryBtn">いちご</button>
+    <button id="cabbageBtn">きゃべつ</button>
+</div>
+<script>
+    //<li id="banana" class="fruits">バナナ</li>
+    // <li class="orange fruits">オレンジ</li>
+    // <li>イチゴ</li>
+    // <li id="cabbage" class="vegetable">キャベツ</li>
+    // 【演習1】上記のそれぞれの要素をquerySelector()で取得し変数に代入して、console.logでコンソールに表示してください。
+    const apple = document.querySelector('#apple');
+    console.log(apple);
+
+    const banana = document.querySelector('#banana');
+    console.log(banana);
+
+    const orange = document.querySelector('.orange');
+    console.log(orange);
+
+    const grape = document.querySelector('.grape');
+    console.log(grape);
+
+    const strawberry = document.querySelector('li:last-child(5)');
+    console.log(strawberry);
+    // 【演習2】各ひらがなボタンをクリックしたら（addEventListener）、対象のフルーツもしくは野菜をtextContentで、ひらがなに置きかえてください。
+    const appleBtn = document.querySelector('#appleBtn');
+    appleBtn.addEventListener('click', function () {
+        apple.textContent = 'りんご';
+    })
+
+    const grapeBtn = document.querySelector('#grapeBtn');
+    grapeBtn.addEventListener('click', function () {
+        grape.textContent = 'ぐれーぷ';
+    })
+
+    const strawberryBtn = document.querySelector('.strawberryBtn');
+    strawberryBtn.addEventListener('click', function () {
+        strawberry.textContent = 'いちご';
+    })
+
+    const cabbageBtn = document.querySelector('#cabbageBtn');
+    cabbageBtn.addEventListener('click', function () {
+        cabbage.textContent = 'きゃべつ';
+    })
+
+</script>
+</body>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #ddd;
+        }
+
+        .box.red {
+            background-color: red;
+        }
+
+        .box.green {
+            background-color: green;
+        }
+
+        .box.blue {
+            background-color: blue;
+        }
+
+        /* 必要であれば、追記します。 */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="buttons">
+            <button>Red</button>
+            <button>Green</button>
+            <button>Blue</button>
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScriptはここに書きます。
+    const btns = document.querySelectorAll('.buttons button');
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', function () {
+            const boxElm = document.querySelector('.box');
+            if (i === 0) {
+                boxElm.classList.remove('green');
+                boxElm.classList.remove('blue');
+                boxElm.classList.add('red');
+            } else if (i === 1) {
+                boxElm.classList.remove('red');
+                boxElm.classList.remove('blue');
+                boxElm.classList.add('green');
+            } else {
+                boxElm.classList.remove('red');
+                boxElm.classList.remove('green');
+                boxElm.classList.add('blue');
+            }
+        })
+    }
+</script>
+
+</html>

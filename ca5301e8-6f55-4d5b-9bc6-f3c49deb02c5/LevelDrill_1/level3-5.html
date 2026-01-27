@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <title>レベル3-配列から値を取得</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      vertical-align: top;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      display: flex;
+      max-width: 500px;
+    }
+
+    .text {
+      padding: 10px;
+    }
+
+    .text img {
+      width: 70px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="/">レベル3-配列から値を取得</a></h1>
+  <h1>2025セリーグ表彰</h1>
+  <div class="card">
+    <div class="imagearea">
+      <img src="images/bestnine/sato_teruaki.jpg" alt="佐藤 輝明" />
+    </div>
+    <div class="text">
+      <h2>佐藤 輝明</h2>
+      <p>最優秀選手賞</p>
+      <p>阪神タイガース</p>
+      <img src="images/bestnine/logo_t_l.gif" alt="阪神ロゴ" />
+    </div>
+  </div>
+  <script>
+    const name = [
+      "村上 頌樹",
+      "坂本 誠志郎",
+      "大山 悠輔",
+      "中野 拓夢",
+      "佐藤 輝明",
+      "泉口 友汰",
+      "森下 翔太",
+      "近本 光司",
+      "岡林 勇希",
+    ];
+    const images = [
+      "murakami_shoki.jpg",
+      "sakamoto_seishiro.jpg",
+      "oyama_yusuke.jpg",
+      "nakano_takumu.jpg",
+      "sato_teruaki.jpg",
+      "izuguchi_yuta.jpg",
+      "morishita_shota.jpg",
+      "chikamoto_koji.jpg",
+      "okabayashi_yuki.jpg",
+    ];
+    const award = [
+      "ベストナイン（投手）",
+      "ベストナイン（捕手）",
+      "ベストナイン（一塁手）",
+      "ベストナイン（二塁手）",
+      "ベストナイン（三塁手）",
+      "ベストナイン（遊撃手）",
+      "ベストナイン（外野手）",
+      "ベストナイン（外野手）",
+      "ベストナイン（外野手）",
+    ];
+    const team = [
+      "阪神タイガース",
+      "阪神タイガース",
+      "阪神タイガース",
+      "阪神タイガース",
+      "阪神タイガース",
+      "読売ジャイアンツ",
+      "阪神タイガース",
+      "阪神タイガース",
+      "中日ドラゴンズ",
+    ];
+    const logo = [
+      { alt: "阪神ロゴ", img: "logo_t_l.gif" },
+      { alt: "阪神ロゴ", img: "logo_t_l.gif" },
+      { alt: "阪神ロゴ", img: "logo_t_l.gif" },
+      { alt: "阪神ロゴ", img: "logo_t_l.gif" },
+      { alt: "阪神ロゴ", img: "logo_t_l.gif" },
+      { alt: "巨人ロゴ", img: "logo_g_l.gif" },
+      { alt: "阪神ロゴ", img: "logo_t_l.gif" },
+      { alt: "阪神ロゴ", img: "logo_t_l.gif" },
+      { alt: "中日ロゴ", img: "logo_d_l.gif" },
+    ];
+    //上記の配列を使って、JavaScriptで最優秀選手賞と同じhtmlを作成し、縦に並べてください。
+    //for文とテンプレートリテラルを使って一気に作成してください。
+
+    for (let i = 0; i < name.length; i++) {
+      document.body.innerHTML += `<div class="card">
+    <div class="imagearea">
+      <img src="images/bestnine/${images[i]}" alt="${name[i]}" />
+    </div>
+    <div class="text">
+      <h2>${name[i]}</h2>
+      <p>${award[i]}</p>
+      <p>${team[i]}</p>
+      <img src="images/bestnine/${logo[i].img}" alt="${logo[i].alt}" />
+    </div>
+  </div>`
+    }
+
+  </script>
+</body>
+
+</html>

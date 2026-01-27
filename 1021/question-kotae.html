@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p class='question1'>問題欄1</p>
+        <input type="text" class="response1">
+        <button id="btn1">回答する</button>
+    </div>
+    <div>
+        <p class='question2'>問題欄2</p>
+        <input type="text" class="response2">
+        <button id="btn2">回答する</button>
+    </div>
+    <div>
+        <p class='question3'>問題欄3</p>
+        <input type="text" class="response3">
+        <button id="btn3">回答する</button>
+    </div>
+    <div>
+        <p class='question4'>問題欄4</p>
+        <input type="text" class="response4">
+        <button id="btn4">回答する</button>
+    </div>
+    <script>
+        const question = ['日本で一番高い山は？', '1＋2＋3＋4＋5 の合計は？', 'りんごは英語で？', '信号機の「進め」は何色？'];
+        const answer = ['富士山', '15', 'apple', '青'];
+
+        //問題の配列をインデックスを使って各問題欄に追加してください。
+
+        const question1 = document.querySelector('.question1');
+        question1.textContent = question[0];
+
+        // 2〜4
+        const question2 = document.querySelector('.question2');
+        question2.textContent = question[1];
+
+        const question3 = document.querySelector('.question3');
+        question3.textContent = question[2];
+
+        const question4 = document.querySelector('.question4');
+        question4.textContent = question[3];
+
+        //クリックをするとinput内の回答と比較して、あっていれば、alertで正解、不正解を知らせる仕組みを作ってください。※回答欄の値は、.valueで取得できます。
+
+        const resultBtn1 = document.querySelector('#btn1');
+
+        resultBtn1.addEventListener('click', function () {
+            const response1 = document.querySelector('.response1').value;
+            if (response1 === answer[0]) {
+                alert('正解です');
+            } else {
+                alert('不正解です');
+            }
+        });
+
+        // 2〜4
+        const resultBtn2 = document.querySelector('#btn2');
+
+        resultBtn2.addEventListener('click', function () {
+            const response2 = document.querySelector('.response2').value;
+            if (response2 === answer[1]) {
+                alert('正解です');
+            } else {
+                alert('不正解です');
+            }
+        });
+
+        const resultBtn3 = document.querySelector('#btn3');
+
+        resultBtn3.addEventListener('click', function () {
+            const response3 = document.querySelector('.response3').value;
+            if (response3 === answer[2]) {
+                alert('正解です');
+            } else {
+                alert('不正解です');
+            }
+        });
+
+        const resultBtn4 = document.querySelector('#btn4');
+
+        resultBtn4.addEventListener('click', function () {
+            const response4 = document.querySelector('.response4').value;
+            if (response4 === answer[3]) {
+                alert('正解です');
+            } else {
+                alert('不正解です');
+            }
+        });
+    </script>
+</body>
+
+</html>

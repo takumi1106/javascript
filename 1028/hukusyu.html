@@ -1,0 +1,166 @@
+<header class="site-header">
+    <h1>ソロモン王の封印した72体の悪魔</h1>
+    <p>
+        ダダダッ！バエルがあらわれた！<br />
+        ボタンをクリックして攻撃、HPを0にして倒せ！
+    </p>
+</header>
+
+<main class="container">
+    <section class="battle">
+        <div class="enemy">
+            <div class="effect-fly">
+                <img class="enemyImg" src="https://2025doc.hideok.org/images/secondterm/25monster_bael.png"
+                    alt="ソロモン72柱-バエル" decoding="async" />
+            </div>
+            <div class="hp-wrap">
+                <div class="hpText">HP: <span>100</span> / 100</div>
+                <progress class="hpBar" max="100" value="100"></progress>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="attackBtn btn primary" type="button">攻撃する！</button>
+            <button class="restartBtn btn" type="button">リスタート</button>
+        </div>
+        <p class="log"></p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>
+        <small> 氏家まさら（<a href="https://uzi-material.com/" target="_blank" rel="noopener noreferrer">素材屋『氏』</a>）</small>
+    </p>
+    <p>
+        <small><a href="https://soundeffect-lab.info/" target="_blank" rel="noopener noreferrer">効果音ラボ -
+                フリー、商用無料、報告不用の効果音素材をダウンロード</a></small>
+    </p>
+</footer>
+<audio id="se-hit" src="https://2025doc.hideok.org/images/secondterm/hit.mp3" preload="auto"></audio>
+<audio id="se-defeat" src="https://2025doc.hideok.org/images/secondterm/defeat.mp3" preload="auto"></audio>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .container {
+        max-width: 500px;
+        margin-inline: auto;
+        padding: 1rem;
+    }
+
+    .enemy h2 {
+        font-size: 1em;
+        margin-bottom: 1rem;
+    }
+
+    .enemy img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.12s ease, opacity 0.3s ease, filter 0.3s ease;
+    }
+
+    /* 攻撃時のブルブル震える */
+    .enemy.hit img {
+        animation: shake 0.12s ease-in-out;
+    }
+
+    @keyframes shake {
+
+        0%,
+        100% {
+            transform: translateX(0) scale(0.96);
+        }
+
+        25% {
+            transform: translateX(-4px) scale(0.96) rotate(-2deg);
+        }
+
+        75% {
+            transform: translateX(4px) scale(0.96) rotate(2deg);
+        }
+    }
+
+    /* HP表示まわり */
+    .hp-wrap {
+        max-width: 200px;
+        margin: 12px auto;
+        text-align: left;
+    }
+
+    .hpText {
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .hpBar {
+        width: 100%;
+        height: 14px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #fff;
+        cursor: pointer;
+    }
+
+    .btn[disabled] {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .log {
+        margin-top: 16px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    /* 1) 飛んでいく：上へ移動＋少し回転しながらフェードアウト */
+    .enemyImg.enemy--fly {
+        transform: translateY(-320px) rotate(-12deg) scale(0.9);
+        opacity: 0;
+        filter: grayscale(100%);
+        transition-duration: 0.9s ease-in;
+    }
+
+    /* 2) つぶれる：縦につぶれて消える */
+    .enemyImg.enemy--squash {
+        transform: scaleY(0.2) scaleX(1.08);
+        opacity: 0;
+        filter: grayscale(100%);
+        transition-duration: 0.6s ease-out;
+    }
+</style>
+<script>
+    attackButton.addEventListener('click', function () {
+        // ダメージ計算
+        hp = hp - 10;
+        hpText.textContent = hp;
+    });
+    attackButton.addEventListener('click', function () {
+        const damage =
+            Math.floor(Math.random() * (DAMAGE_MAX - DAMAGE_MIN + 1)) + DAMAGE_MIN;
+        // ダメージ計算
+        hp = hp - damage;
+        hpText.textContent = hp;
+    });
+</script>

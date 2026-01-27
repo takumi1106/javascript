@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <title>レベル3-クリックイベントでclass属性の操作</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+      margin: 10px;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .gray {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="/">レベル3-クリックイベントでclass属性の操作</a></h1>
+  <div class="box">gray</div>
+  <div class="box">red</div>
+  <div class="box">blue</div>
+  <div class="box">green</div>
+  <div class="box">yellow</div>
+  <script>
+    //下記の変数を使って、ボックスをクリックするとclass属性がトグルして背景色が切り替わるようにしてください。
+    const box = document.querySelectorAll(".box");
+
+    box[0].addEventListener("click", function () {
+      box[0].classList.toggle("gray");
+    })
+
+    box[1].addEventListener("click", function () {
+      box[1].classList.toggle("red");
+    })
+  </script>
+</body>
+
+</html>

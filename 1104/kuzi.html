@@ -1,0 +1,46 @@
+<h1>当たりを探せ！</h1>
+<div class="buttons">
+    <button>押す</button>
+    <button>押す</button>
+    <button>押す</button>
+    <button>押す</button>
+    <button>押す</button>
+    <button>押す</button>
+    <button>押す</button>
+    <button>押す</button>
+    <button>押す</button>
+</div>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 500px;
+        margin-inline: auto;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    body.winner {
+        background-color: pink;
+    }
+
+    body.loser {
+        background-color: #ccc;
+    }
+</style>
+<script>
+    //ボタンを押して当たったら背景がピンク色、はずれたらグレー色になるようにしてください。
+
+    // 1. button要素を全て取得して、変数buttonsに代入する
+    // 2. buttonsの要素数分、ランダムな数（0〜8）を生成する
+    // 3. for文で、buttonsの要素数分、クリックイベントを設定する。もし、ランダムな数値と、クリックした要素のインデックスが一致したら、ピンク色にする（winnerクラスを追加して、loserクラスを削除する） もし、ランダムな数数値と、クリックした要素のインデックスが一致しなかったら、グレー色にする（loserクラスを追加して、winnerクラスを削除する）
+
+</script>

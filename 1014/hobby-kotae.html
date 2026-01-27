@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列・条件分岐（if文）の振り返り</title>
+</head>
+
+<body>
+    <button id="btn">クリック</button>
+    <script>
+        const hobbies = ['映画鑑賞', '読書', '旅行'];
+        //Q1. ボタンがクリックされた回数を数えるための変数countを作り、最初の値を0にしたい。そのためのJavaScriptの文を書きなさい。※カウンターなので再代入が必要になると思われる
+        let count = 0;
+
+        //Q2. 次の3つの文字列を配列colorsに代入しなさい。値は「赤」「青」「黄」とする。
+        const colors = ['赤', '青', '黃'];
+
+        //Q3. 問2で作成した配列colorsの2番目の要素を変数blueに代入し、blueが「青」であるときにコンソールに「正解です」と表示し、それ以外なら「不正解です」と表示するif 文を書きなさい。*配列の要素を取り出す書き方に注意すること。
+        const blue = colors[1];
+        if (blue === '青') {
+            console.log('正解です');
+        } else {
+            console.log('不正解です');
+        }
+
+        //Q4. HTMLに <button id="btn">クリック</button> があるこのボタンをクリックしたら「押されました」とアラートを出す処理をaddEventListenerを使って書きなさい。アラートの表示は、alert('文字')
+        const Btn = document.querySelector('#btn');
+        Btn.addEventListener('click', function () {
+            alert('押されました.');
+        });
+
+        //Q5. 次の仕様を満たす JavaScript のコードを書きなさい。配列hobbiesがある。if文で、hobbiesの要素数が3なら「趣味が3つあります」とコンソールに表示し、それ以外なら「趣味が3つではありません」と表示しなさい。配列の要素数プロパティ.length の理解
+        const num = hobbies.length;
+        if (num === 3) {
+            console.log('趣味が3つあります');
+        } else {
+            console.log('趣味が3つではありません');
+        }
+    </script>
+</body>
+
+</html>

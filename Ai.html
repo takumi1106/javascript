@@ -1,0 +1,108 @@
+<script>
+    // const add = function (a, b) {
+    //     return a + b;
+    // };
+    // const result1 = add(5, 8)
+    // console.log(result1);
+
+    // const double = function (num) {
+    //     // ここ
+    //     return num * 2;
+    // };
+
+    // const result2 = double(7);
+    // console.log(result2); // 14
+
+    // const checkNumber = function (num) {
+    //     // ここに書く
+    //     if (num >= 10) {
+    //         return "OK"
+    //     } else {
+    //         return "NG"
+    //     }
+    // };
+
+    // console.log(checkNumber(12)); // "OK"
+    // console.log(checkNumber(3));  // "NG"
+
+    // const checkEvenOdd = function (num) {
+    //     // ここ
+    //     if (num % 2 === 0) {
+    //         return "偶数"
+    //     }
+    //     return "奇数"
+    // };
+    // console.log(checkEvenOdd(4)); // 偶数
+    // console.log(checkEvenOdd(7)); // 奇数
+
+    // const sumArray = function (arr) {
+    //     // ここ
+    //     return arr[0] + arr[1] + arr[2];
+    // };
+
+    // console.log(sumArray([3, 5, 7])); // 15
+
+    // const checkResult = function (arr) {
+    //     // ここ
+    //     if (arr[0] + arr[1] + arr[2] >= 20) {
+    //         return "大当たり";
+    //     }
+    //     return "はずれ"
+    // };
+
+    // console.log(checkResult([7, 7, 7])); // 大当たり
+    // console.log(checkResult([3, 5, 7])); // はずれ
+
+    // btn.addEventListener("click", function () {
+    //     // ここ
+    //     const a = Math.floor(Math.random() * 10);
+    //     const b = Math.floor(Math.random() * 10);
+    //     const c = Math.floor(Math.random() * 10);
+    //     const nums = [a, b, c];
+    //     const result3 = checkResult(nums);
+    //     console.log(result3);
+    // });
+
+    // const data = {
+    //     "name": "後藤",
+    //     "age": 20,
+    //     "skills": ["HTML", "CSS", "JavaScript"]
+    // };
+    // console.log(data.skills[2])
+
+    // const users = [
+    //     { "name": "田中", "age": 18 },
+    //     { "name": "佐藤", "age": 22 },
+    //     { "name": "鈴木", "age": 25 }
+    // ];
+    // for (let i = 0; i < users.length; i++) {
+    //     if (users[i].age >= 20) {
+    //         console.log(users[i].name);
+    //     }
+    // }
+
+    const square = function (num) {
+        // 処理
+        return num * num;
+    };
+    console.log(square(3)); // 9
+    console.log(square(7)); // 49
+
+    const sumArray = function (arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    };
+
+    console.log(sumArray([1, 2, 3]));  // 6
+    console.log(sumArray([5, 10, 15])); // 30
+
+    const add = function (a, b) {
+        return a + b;
+    }
+
+    console.log(add(3, 7));  // 10
+    console.log(add(15, 5)); // 20
+</script>

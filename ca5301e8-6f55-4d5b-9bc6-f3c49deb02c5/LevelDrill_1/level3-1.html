@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <title>レベル3-クリックイベントで値の操作</title>
+</head>
+
+<body>
+  <h1><a href="/">レベル3-クリックイベントで値の操作</a></h1>
+  <button>色が変わるボタン</button>
+  <p>色が変わる<span>文字</span></p>
+
+  <script>
+    const colors = ["red", "blue", "yellow", "green", "pink", "purple"];
+    //下記の変数を使って、ボタンをクリックするたびに、span内の文字の色が
+    //配列colorの順番に変化するようにしてください。
+    //ただし、最後の色まできたら、blackに戻るようにしてください。
+    const bigBtn = document.querySelector("button");
+    const bigText = document.querySelector("span");
+
+    let index = 0;
+
+    bigBtn.addEventListener("click", function () {
+      if (index < colors.length) {
+        bigText.style.color = colors[index];
+        index++;
+      } else {
+        bigText.style.color = "black";
+        index = 0;
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<button id="btn">今日のラッキーアイテム</button>
+<p id="result"></p>
+
+<script>
+    // const fruits = ['りんご', 'バナナ', 'みかん'];
+    // console.log(fruits);
+
+    // const user = {
+    //     name: '太郎',
+    //     age: 20,
+    //     favorite__color: 'blue'
+    // };
+
+    // function triple(num) {
+    //     return num * 3;
+    // }
+
+    // // const result = triple(2);
+    // // console.log(result);
+
+    // const sayHi = function () {
+    //     return 'こんにちは';
+    // }
+
+    // const animals = ['ねこ', 'いぬ', 'うさぎ'];
+
+    // const getRandomAnimal = function (array) {
+    //     // ここを完成させてください
+    //     return array[Math.floor(Math.random() * array.length)];
+    // };
+    // console.log(getRandomAnimal(animals));
+
+    // // const name = '佐藤';
+    // // const text = `私の名前は${name}です`;
+    // // console.log(text);
+
+    // const menu = {
+    //     drinks: ['コーヒー', '紅茶', 'ジュース'],
+    //     snacks: ['ケーキ', 'クッキー', 'サンドイッチ']
+    // };
+
+    // const getRandomItem = function (type) {
+    //     // typeには 'drinks' または 'snacks' が入る
+    //     const list = menu[type];
+    //     // その配列からランダムで1つ返す処理を作る
+    //     const index = Math.floor(Math.random() * list.length);
+    //     const item = list[index];
+    //     return item;
+    // };
+
+    // const fortunes = {
+    //     '大 吉': 'ラッキー！',
+    //     '中 吉': 'まあまあ',
+    //     '小 吉': '気をつけて'
+    // };
+    // const today = '大 吉';
+    // const message = fortunes[today];
+    // console.log(message);
+
+    // const name = '花子';
+    // const age = 20;
+    // const hobby = '読書';
+
+    // const text = `名前:${name},年齢:${age}歳,趣味:${hobby}`
+    // console.log(text);
+
+    // const getRandomElement = function (array) {
+    //     return array[Math.floor(Math.random() * array.length)];
+    // };
+    // const items = ['お守り', 'ノート', 'スマホ', 'コーヒー'];
+    // console.log(getRandomElement(items));
+    // const btn = document.querySelector('#btn');
+    // const result = document.querySelector('#result');
+    // btn.addEventListener('click', function () {
+    //     result.innerHTML = getRandomElement(items);
+    // });
+
+    const fruits = ['りんご', 'バナナ', 'みかん'];
+    const getRandomFruit = function () {
+        return fruits[Math.floor(Math.random() * fruits.length)];
+    }
+    console.log(getRandomFruit());
+
+    const fortunes = {
+        '大 吉': 'ラッキー！',
+        '中 吉': 'まあまあ',
+        '小 吉': '気をつけて'
+    };
+    const today = '中 吉';
+    console.log(fortunes[today]);
+</script>

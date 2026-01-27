@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <title>レベル3-マウスオーバーイベントで属性の操作</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f0f0f0;
+      margin: 40px;
+    }
+
+    .area {
+      display: flex;
+    }
+
+    .xg {
+      list-style: none;
+      margin-right: 40px;
+    }
+
+    .xg li {
+      cursor: pointer;
+    }
+
+    img {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="/">レベル3-マウスオーバーイベントで属性の操作</a></h1>
+  <div class="area">
+    <ul class="xg">
+      <li id="jurin">JURIN</li>
+      <li id="chisa">CHISA</li>
+      <li id="hinata">HINATA</li>
+      <li id="harvey">HARVEY</li>
+      <li id="juria">JURIA</li>
+      <li id="maya">MAYA</li>
+      <li id="cocona">COCONA</li>
+    </ul>
+    <div class="member">
+      <img src="https://xgalx.com/xg/assets/img/common/logo_sitetitle.svg" alt="XGロゴ" />
+    </div>
+  </div>
+  <script>
+    //下記の変数を使ってメンバー名の上にマウスオーバーしたら、画像のsrc属性を変更してimages>xg内の画像を表示させてください。
+    //alt属性は、<li>タグのテキストに変更してください。
+    //マウスアウトしたら、元に戻してください。
+    const xg = document.querySelectorAll(".xg li");
+    const member = document.querySelector(".member img");
+
+
+
+
+  </script>
+</body>
+
+</html>

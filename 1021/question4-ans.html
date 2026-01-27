@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3週目 小テスト用ベースHTML</title>
+</head>
+
+<body>
+    <!-- Q3用：name属性を持つボタン（document.querySelectorで取得可） -->
+    <div class="buttons">
+        <button name="all">すべて</button>
+    </div>
+
+    <!-- Q4・Q5用：画像（複数）。-->
+    <div class="gallery">
+        <img id="photo" src="images/animal1.jpg" alt="動物1" class="animal">
+        <img src="images/scenery1.jpg" alt="風景1" class="scenery">
+        <img src="images/food1.jpg" alt="食べ物1" class="food">
+        <img src="images/animal2.jpg" alt="動物2" class="animal">
+    </div>
+
+    <!-- 回答はGoogleフォームに記述する想定。ここで動作確認してください -->
+    <script>
+        // Q2用配列
+        const fruits = ['りんご', 'みかん', 'ぶどう'];
+
+        // Q4用変数
+        const photo = document.querySelector('#photo');
+
+        // Q5用変数
+        const images = document.querySelectorAll('img');
+
+        //Q1. 次の文の ＿＿＿＿ に入るオブジェクトは同じです。最適なオブジェクト名を答えなさい。
+        //＿＿＿＿.alert('Hello!');
+        //＿＿＿＿.console.log('テスト完了');
+        //＿＿＿＿.document.querySelector('img');
+
+
+        //Q2. 次の配列 const fruits = ['りんご', 'みかん', 'ぶどう']; がある。この配列の要素を1つずつ console.log() で表示する for文 を書きなさい。
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+        //Q3. button要素がある。name属性を取得して、consoleに表示するコードを書きなさい。
+        const allBtn = document.querySelector('button[name=all]');
+        console.log(allBtn);
+
+        //Q4. 変数 photo に格納された画像要素が、クラス "animal" を持っているかを調べてconsoleに表示するコードを書きなさい。（true の時、「持っている」または falseのとき「持ってない」）
+
+
+        //Q5. 次の変数imagesに、複数の画像が入っています。すべての画像にクラス "show" を追加するコードを書きなさい。
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>おにぎり職人ゲーム</title>
+</head>
+
+<body>
+    <h1>🍙 おにぎり職人チャレンジ！</h1>
+    <p>
+        ボタンをクリックしてしゃけおにぎりを握ろう。<br />具材はランダムで決まるよ！
+    </p>
+    <button id="makeBtn">おにぎりを握る</button>
+    <p id="log">具材がここに表示されます。</p>
+    <p id="shakeCount"><span>0</span> 回</p>
+    <script>
+        //Q5で利用する
+        const shakeCount = document.querySelector('.shakeCount span');
+        let shakeCountNum = 0;
+        //ここに記述していきます。
+        //01.5〜15をランダムに決めるコードとして正しいものを1つ選びなさい。
+        //02.関数 makeOnigiri を定義し、関数の中でconsole.log("おにぎりを握った！");と表示するコードを書きなさい。また、その関数を実行するコードも書いてください。
+        //03.4つの具材が入った配列 ingredients を作ってください。具材：しゃけ、うめ、こんぶ、ツナマヨ
+        //Q4. <button id="makeBtn">おにぎりを握る</button>をクリックしたら、Q3の配列ingredientsの中からランダムに1つを選んで、変数resultに代入し、 console.log()で表示するコードを書いてください。//インデックスは0～3になります。
+        //05.04に加えて、if文で「しゃけ」が出たときにカウントされて <p id="shakeCount"><span>0</span> 回</p>の数字に表示されるコードをかいてください。変数shakeCountと変数shakeCountNumを使ってください。
+
+    </script>
+</body>
+
+</html>
