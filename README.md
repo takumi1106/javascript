@@ -13,8 +13,6 @@ UI の挙動やアクセシビリティを意識した実装を中心に取り�
 - 上にスクロールするとヘッダーが再表示される  
 - 一定量スクロールした後にのみ動作するよう制御  
 
-### 実装内容（JavaScript）
-
 ```js
 let lastScroll = 0;
 
@@ -38,8 +36,6 @@ window.addEventListener("scroll", function () {
 - `aria-expanded` の更新
 - Tab移動の制御とフォーカス移動（アクセシビリティ対応）
 - `Escape`キーで閉じる／背景スクロール停止
-
-### 実装内容（JavaScript）
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.js-hamburger');
@@ -139,8 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
 - スクロールで要素が表示領域に入ったタイミングで、
 下からふわっと表示されるアニメーションを実装しています。
 
-### 実装内容（JavaScript）
-
 document.addEventListener('DOMContentLoaded', () => {
     const fadeTargets = document.querySelectorAll('.fade-in, .fade-main, .fade-sub');
 
@@ -161,8 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
 ## スクロールストップ
 
 - ページ最下部に到達した際に、それ以上スクロールできないよう制御しています。
-
-### 実装内容（JavaScript）
 
 document.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
